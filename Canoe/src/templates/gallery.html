@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Canoe Federation of India</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/master.css' %}">
+    <link rel="stylesheet" href="{% static 'css/gallery.css' %}">
+    <link rel="stylesheet" href="{% static 'css/preloader.css' %}">
+  </head>
+  <body>
+    <div class="preloader">
+      <div class="circle">
+      </div>
+    </div>
+    <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper container">
+        <a href="{% url 'website:index' %}" class="brand-logo">Canoe Federation of India</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+<!--
+          <li><a href="{% url 'website:index' %}">Home</a></li>
+-->
+          <li><a href="{% url 'website:events' %}">Events</a></li>
+          <li><a href="{% url 'website:office_bearers' %}">Office Bearers</a></li>
+          <li><a href="{% url 'website:register' %}">Register</a></li>
+        </ul>
+      </div>
+    </nav>
+    <ul class="sidenav" id="mobile-demo">
+      <li><a href="{% url 'website:index' %}">Home</a></li>
+      <li><a href="{% url 'website:events' %}">Events</a></li>
+      <li><a href="{% url 'website:office_bearers' %}">Office Bearers</a></li>
+      <li><a href="{% url 'website:register' %}">Register</a></li>
+    </ul>
+  </div>
+  <section class="gallery container">
+  <div class="row">
+    <div class="col s6 m4 gallery-image">
+      <img src="https://source.unsplash.com/random/800x600" class="materialboxed responsive-img" alt="Gallery Image">
+    </div>
+    <div class="col s6 m4 gallery-image">
+      <img src="https://source.unsplash.com/random/801x600" class="materialboxed responsive-img" alt="Gallery Image">
+    </div>
+    <div class="col s6 m4 gallery-image">
+      <img src="https://source.unsplash.com/random/800x601" class="materialboxed responsive-img" alt="Gallery Image">
+    </div>
+    <div class="col s6 m4 gallery-image">
+      <img src="https://source.unsplash.com/random/801x601" class="materialboxed responsive-img" alt="Gallery Image">
+    </div>
+    <div class="col s6 m4 gallery-image">
+      <img src="https://source.unsplash.com/random/799x600" class="materialboxed responsive-img" alt="Gallery Image">
+    </div>
+    <div class="col s6 m4 gallery-image">
+      <img src="https://source.unsplash.com/random/800x602" class="materialboxed responsive-img" alt="Gallery Image">
+    </div>
+  </div>
+  </section>
+
+  <footer>
+    <div class="row">
+      <div class="col s12 m4">
+      </div>
+      <div class="col s12 m4">
+        john@bml.edu.in<br/>
+        +91 123-456-xxxx<br/><br/>
+        Backdoor Hype, 22 North, <br/>
+        Wisconsin, MI
+      </div>
+      <div class="col 12 m4">
+        <ul>
+          <li>Gallery</li>
+          <li>Office Bearers</li>
+          <li>Events</li>
+          <hr style="width: 50%; margin: 10px 0;">
+          <li>Meet the Developers</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row center copyright">
+      <p>&copy; Canoe Federation of India 2018</p>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+  <script>
+  $(window).on('load', function() {
+      $(".circle").fadeOut();
+      $(".preloader").delay(1000).fadeOut('slow');
+  });
+  $(document).ready(function(){
+    $('.sidenav').sidenav();
+    $('.parallax').parallax();
+    $('nav').css('background','black');
+    $('.materialboxed').materialbox();
+  });
+  </script>
+</body>
+</html>

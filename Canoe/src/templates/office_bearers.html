@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Canoe Federation of India</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+
+    <link rel="stylesheet" href="{% static 'css/master.css' %}">
+    <link rel="stylesheet" href="{% static 'css/preloader.css' %}">
+
+    <style>
+        .heading{
+         margin: 50px 0;
+        }
+        .info .name h5{
+        font-weight: 600;
+        }
+        .contact a{
+        text-decoration: none;
+        color: #333!important;
+        }
+        .contact a:hover{
+        color: #444!important;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="preloader">
+      <div class="circle">
+      </div>
+    </div>
+    <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper container">
+        <a href="{% url 'website:index' %}" class="brand-logo">Canoe Federation of India</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+<!--
+            <li><a href="{% url 'website:index' %}">Home</a></li>
+-->
+            <li><a href="{% url 'website:gallery' %}">Gallery</a></li>
+            <li><a href="{% url 'website:events' %}">Events</a></li>
+            <li><a href="{% url 'website:register' %}">Register</a></li>
+        </ul>
+      </div>
+    </nav>
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="{% url 'website:index' %}">Home</a></li>
+        <li><a href="{% url 'website:gallery' %}">Gallery</a></li>
+        <li><a href="{% url 'website:events' %}">Events</a></li>
+        <li><a href="{% url 'website:register' %}">Register</a></li>
+    </ul>
+  </div>
+
+    <div class=container>
+  <div class="heading">
+    <h3>Office Bearers</h3>
+  </div>
+  <div class="row">
+      {% for person, detail in official_list.items %}
+  <div class="col s12 m6">
+        <div class="card-panel grey lighten-5 z-depth-1">
+          <div class="row valign-wrapper">
+            <div class="col s4">
+              <img src="https://www.w3schools.com/w3images/avatar2.png" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+            </div>
+            <div class="col s8">
+              <div class="info">
+                <div class="name">
+                  <h5>{{person}}</h5>
+                </div>
+                <div class="desg">
+                  <p>{{detail.role}}</p>
+                </div>
+                  <div class="desg">
+                  <p>Contact : {{detail.phone}}</p>
+                </div>
+                  <div class="desg">
+                  <p>Email : {{detail.email}}</p>
+                </div>
+                <div class="contact">
+                  <a href={{detail.link}} target="_blank"><i class="material-icons">chat</i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+ <!-- <div class="col s12 m6">
+        <div class="card-panel grey lighten-5 z-depth-1">
+          <div class="row valign-wrapper">
+            <div class="col s4">
+              <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="" class="circle responsive-img"> &lt;!&ndash; notice the "circle" class &ndash;&gt;
+            </div>
+            <div class="col s8">
+              <div class="info">
+                <div class="name">
+                  <h5>Nishit Garg</h5>
+                </div>
+                <div class="desg">
+                  <p>President's Bhai</p>
+                </div>
+                <div class="contact">
+                  <a href="https://www.fb.com" target="_blank"><i class="material-icons">chat</i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  <div class="col s12 m6">
+        <div class="card-panel grey lighten-5 z-depth-1">
+          <div class="row valign-wrapper">
+            <div class="col s4">
+              <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="" class="circle responsive-img"> &lt;!&ndash; notice the "circle" class &ndash;&gt;
+            </div>
+            <div class="col s8">
+              <div class="info">
+                <div class="name">
+                  <h5>Mann Khatri</h5>
+                </div>
+                <div class="desg">
+                  <p>President's Trainer</p>
+                </div>
+                <div class="contact">
+                  <a href="https://www.fb.com" target="_blank"><i class="material-icons">chat</i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+   <div class="col s12 m6">
+        <div class="card-panel grey lighten-5 z-depth-1">
+          <div class="row valign-wrapper">
+            <div class="col s4">
+              <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="" class="circle responsive-img"> &lt;!&ndash; notice the "circle" class &ndash;&gt;
+            </div>
+            <div class="col s8">
+              <div class="info">
+                <div class="name">
+                  <h5>Mayank Jindal</h5>
+                </div>
+                <div class="desg">
+                  <p>President's MMA Trainer</p>
+                </div>
+                <div class="contact">
+                  <a href="https://www.fb.com" target="_blank"><i class="material-icons">chat</i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+-->
+</div>
+    </div><!-- Container ends -->
+
+  <footer>
+    <div class="row">
+      <div class="col s12 m4">
+      </div>
+      <div class="col s12 m4">
+        john@bml.edu.in<br/>
+        +91 123-456-xxxx<br/><br/>
+        Backdoor Hype, 22 North, <br/>
+        Wisconsin, MI
+      </div>
+      <div class="col 12 m4">
+        <ul>
+          <li>Gallery</li>
+          <li>Office Bearers</li>
+          <li>Events</li>
+          <hr style="width: 50%; margin: 10px 0;">
+          <li>Meet the Developers</li>
+        </ul>
+      </div>
+    </div>
+    <div class="row center copyright">
+      <p>&copy; Canoe Federation of India 2018</p>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+  <script>
+  $(window).on('load', function() {
+      $(".circle").fadeOut();
+      $(".preloader").delay(1000).fadeOut('slow');
+  });
+  $(document).ready(function(){
+    $('.sidenav').sidenav();
+    $('.parallax').parallax();
+    $('nav').css('background','black');
+    $('.materialboxed').materialbox();
+  });
+  </script>
+</body>
+</html>

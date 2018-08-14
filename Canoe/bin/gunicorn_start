@@ -1,0 +1,26 @@
+#!/bin/bash
+
+NAME="canoe"
+DIR=/home/canoe/Canoe/src
+USER=canoe
+GROUP=canoe
+WORKERS=3
+BIND=unix:/home/canoe/run/gunicorn.sock
+DJANGO_SETTINGS_MODULE=canoe.settings
+DJANGO_WSGI_MODULE=canoe.wsgi
+LOG_LEVEL=error
+
+cd $DIR
+source ../bin/activate
+
+export DJANGO_SETTINGS_MODULE=$DJANGO_SETTINGS_MODULE
+export PYTHONPATH=$DIR:$PYTHONPATH
+
+exec ../bin/gunicorn ${DJANGO_WSGI_MODULE}:application \
+  --name $NAME \
+  --workers $WORKERS \
+  --user=$USER \
+  --group=$GROUP \
+  --bind=$BIND \
+  --log-level=$LOG_LEVEL \
+  --log-file=-

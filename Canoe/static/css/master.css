@@ -1,0 +1,78 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.hero{
+  background: url('../img/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+nav{
+  background: transparent;
+  box-shadow: none!important;
+}
+
+nav .brand-logo{
+  font-weight: 800;
+}
+
+.about, .contact{
+  padding: 10vh 5vw;
+}
+
+.heading h3{
+  font-weight: 600;
+}
+
+.cfi-logo img{
+  max-width: 150px;
+  margin-bottom: 30px;
+}
+
+.about .desc{
+  font-size: 1.2em;
+}
+
+.btn-cfi{
+  background: transparent;
+  color: #333;
+  border-radius: 0;
+  padding: 0px 15px;
+}
+
+.btn-cfi:hover{
+  background-color: #111;
+  color: #fff;
+}
+
+footer{
+  background: black;
+  color: #fff;
+  padding: 100px 50px;
+}
+
+footer .row{
+  margin-bottom: 0;
+}
+
+footer .copyright{
+  margin-top: 50px;
+}
+
+/* Input Fields */
+.input-field input, textarea{
+  color: #333!important;
+}
+
+.input-field input:focus + label, textarea:focus + label {
+    color: #111!important;
+  }
+  /* label underline focus color */
+  .input-field input:focus, textarea:focus {
+    border-bottom: 1px solid #111!important;
+    box-shadow: 0 1px 0 0 #111!important;
+  }

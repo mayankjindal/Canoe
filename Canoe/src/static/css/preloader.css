@@ -1,0 +1,33 @@
+.preloader{
+  z-index: 1000;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background: #000;
+}
+
+.circle{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100px;
+  width: 100px;
+  border-radius: 0;
+  border-bottom: solid #fff 2px;
+  border-top: solid #fff 2px;
+  animation: anim 3s infinite forwards ease;
+}
+
+.circle h3{
+  color: #fff;
+}
+
+@keyframes anim {
+  0%{
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100%{
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+}

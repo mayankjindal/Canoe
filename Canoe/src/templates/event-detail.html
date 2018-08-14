@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Canoe Federation of India</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/master.css' %}">
+    <link rel="stylesheet" href="{% static 'css/event-detail.css' %}">
+  </head>
+  <body>
+    <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper container">
+        <a href="{% url 'website:index' %}" class="brand-logo">Canoe Federation of India</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+<!--
+          <li><a href="{% url 'website:index' %}">Home</a></li>
+-->
+          <li><a href="{% url 'website:gallery' %}">Gallery</a></li>
+          <li><a href="{% url 'website:office_bearers' %}">Office Bearers</a></li>
+          <li><a href="{% url 'website:register' %}">Register</a></li>
+        </ul>
+      </div>
+    </nav>
+    <ul class="sidenav" id="mobile-demo">
+      <li><a href="{% url 'website:index' %}">Home</a></li>
+      <li><a href="{% url 'website:gallery' %}">Gallery</a></li>
+      <li><a href="{% url 'website:office_bearers' %}">Office Bearers</a></li>
+      <li><a href="{% url 'website:register' %}">Register</a></li>
+    </ul>
+  </div>
+  <section class="event-detail container">
+  <div class="event-name">
+    <h3>{{e_name}}</h3><span class="event-location">{{e_location}}</span>
+  </div>
+  <div class="event-prize">
+    <h4>{{e_prize}}*</h4>
+  </div>
+  <div class="event-desc">
+    {{e_description}}
+  </div>
+  </section>
+  <section class="event-reg container">
+    <div>
+      <h4>Register</h4>
+    </div>
+    <div class="contact-form">
+      <div class="row">
+     <form class="col s12" method="POST"> {% csrf_token %}
+         <div class="row">
+         <div class="input-field col s6">
+           <input id="first_name" type="text" class="validate" name="fname">
+           <label for="first_name">First Name</label>
+         </div>
+         <div class="input-field col s6">
+           <input id="last_name" type="text" class="validate" name="lname">
+           <label for="last_name">Last Name</label>
+         </div>
+         </div>
+         <div class="row">
+         <div class="input-field col s6">
+           <input id="ph_number" type="tel" class="validate" name="phone">
+           <label for="ph_number">Phone Number</label>
+         </div>
+         <div class="input-field col s6">
+           <input id="email" type="email" class="validate" name="email">
+           <label for="email">Email</label>
+         </div>
+       </div>
+       <div class="row">
+         <div class="input-field col s6">
+           <input id="athlete_num" type="text" class="validate" name="athleteid">
+           <label for="athlete_num">Athlete Registration ID</label>
+         </div>
+         <div class="input-field col s6">
+           <input id="team" type="text" class="validate" name="teamname">
+           <label for="team">Team Name</label>
+         </div>
+       </div>
+       <div class="row">
+         <div class="input-field col s6">
+           <input id="city" type="text" class="validate" name="city">
+           <label for="city">City</label>
+         </div>
+         <div class="input-field col s6">
+           <input id="state" type="text" class="validate" name="state">
+           <label for="state">State</label>
+         </div>
+       </div>
+       <div class="row">
+         <div class="col s12">
+            <input type="submit" name="submit" value="Count me" class="btn btn-large btn-cfi">
+         </div>
+       </div>
+     </form>
+    </div>
+    </div>
+  </section>
+
+
+    <footer>
+      <div class="row">
+        <div class="col s12 m4">
+        </div>
+        <div class="col s12 m4">
+          john@bml.edu.in<br/>
+          +91 123-456-xxxx<br/><br/>
+          Backdoor Hype, 22 North, <br/>
+          Wisconsin, MI
+        </div>
+        <div class="col 12 m4">
+          <ul>
+            <li>Gallery</li>
+            <li>Office Bearers</li>
+            <li>Events</li>
+            <hr style="width: 50%; margin: 10px 0;">
+            <li>Meet the Developers</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row center copyright">
+        <p>&copy; Canoe Federation of India 2018</p>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      $('.sidenav').sidenav();
+      $('.parallax').parallax();
+      $('nav').css('background','black');
+    });
+    </script>
+  </body>
+  </html>
