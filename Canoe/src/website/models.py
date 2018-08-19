@@ -61,3 +61,12 @@ class OfficeBearers(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Gallery(models.Model):
+    name = models.CharField(max_length=50)
+    image = models.ImageField(upload_to='static/img')
+    desc = models.TextField()
+
+    def __str__(self):
+        return self.name
