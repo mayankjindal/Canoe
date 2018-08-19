@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import EventRegister, Event, AthleteRegister, OfficeBearers
+from .models import EventRegister, Event, AthleteRegister, OfficeBearers, Gallery
 from django.http import HttpResponse, HttpResponseRedirect
 from .forms import EventRegisterForm, AthleteRegisterForm, ContactForm
 from django.core.mail import send_mail, EmailMessage
@@ -32,7 +32,12 @@ def index(request):
 
 
 def gallery(request):
-    return render(request, 'gallery.html')
+    context = {'img': []}
+    gal = Gallery.objects.all()
+    for g in gal:
+        context['img'].append(g)
+
+    return render(request, 'gallery.html', context)
 
 
 def events(request):

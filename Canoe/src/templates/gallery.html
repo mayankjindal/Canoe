@@ -40,24 +40,11 @@
   </div>
   <section class="gallery container">
   <div class="row">
+    {% for g in img %}
     <div class="col s6 m4 gallery-image">
-      <img src="https://source.unsplash.com/random/800x600" class="materialboxed responsive-img" alt="Gallery Image">
+      <img src="{{MEDIA_URL}}{{g.image.url}}" class="materialboxed responsive-img" alt="Gallery Image">
     </div>
-    <div class="col s6 m4 gallery-image">
-      <img src="https://source.unsplash.com/random/801x600" class="materialboxed responsive-img" alt="Gallery Image">
-    </div>
-    <div class="col s6 m4 gallery-image">
-      <img src="https://source.unsplash.com/random/800x601" class="materialboxed responsive-img" alt="Gallery Image">
-    </div>
-    <div class="col s6 m4 gallery-image">
-      <img src="https://source.unsplash.com/random/801x601" class="materialboxed responsive-img" alt="Gallery Image">
-    </div>
-    <div class="col s6 m4 gallery-image">
-      <img src="https://source.unsplash.com/random/799x600" class="materialboxed responsive-img" alt="Gallery Image">
-    </div>
-    <div class="col s6 m4 gallery-image">
-      <img src="https://source.unsplash.com/random/800x602" class="materialboxed responsive-img" alt="Gallery Image">
-    </div>
+      {% endfor %}
   </div>
   </section>
 
