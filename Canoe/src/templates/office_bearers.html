@@ -13,21 +13,6 @@
     <link rel="stylesheet" href="{% static 'css/master.css' %}">
     <link rel="stylesheet" href="{% static 'css/preloader.css' %}">
 
-    <style>
-        .heading{
-         margin: 50px 0;
-        }
-        .info .name h5{
-        font-weight: 600;
-        }
-        .contact a{
-        text-decoration: none;
-        color: #333!important;
-        }
-        .contact a:hover{
-        color: #444!important;
-        }
-    </style>
   </head>
   <body>
     <div class="preloader">
@@ -67,21 +52,21 @@
         <div class="card-panel grey lighten-5 z-depth-1">
           <div class="row valign-wrapper">
             <div class="col s4">
-              <img src="https://www.w3schools.com/w3images/avatar2.png" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+              <img src="/{{MEDIA_URL}}{{detail.image}}" alt="" class="responsive-img"> <!-- notice the "circle" class -->
             </div>
             <div class="col s8">
               <div class="info">
                 <div class="name">
-                  <h5>{{person}}</h5>
+                    <h5><b>{{person}}</b></h5>
                 </div>
                 <div class="desg">
                   <p>{{detail.role}}</p>
                 </div>
                   <div class="desg">
-                  <p>Contact : {{detail.phone}}</p>
+                  <p>91+ &nbsp{{detail.phone}}</p>
                 </div>
                   <div class="desg">
-                  <p>Email : {{detail.email}}</p>
+                  <p>{{detail.email}}</p>
                 </div>
                 <div class="contact">
                   <a href={{detail.link}} target="_blank"><i class="material-icons">chat</i></a>
@@ -92,74 +77,7 @@
         </div>
       </div>
       {% endfor %}
- <!-- <div class="col s12 m6">
-        <div class="card-panel grey lighten-5 z-depth-1">
-          <div class="row valign-wrapper">
-            <div class="col s4">
-              <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="" class="circle responsive-img"> &lt;!&ndash; notice the "circle" class &ndash;&gt;
-            </div>
-            <div class="col s8">
-              <div class="info">
-                <div class="name">
-                  <h5>Nishit Garg</h5>
-                </div>
-                <div class="desg">
-                  <p>President's Bhai</p>
-                </div>
-                <div class="contact">
-                  <a href="https://www.fb.com" target="_blank"><i class="material-icons">chat</i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-  <div class="col s12 m6">
-        <div class="card-panel grey lighten-5 z-depth-1">
-          <div class="row valign-wrapper">
-            <div class="col s4">
-              <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="" class="circle responsive-img"> &lt;!&ndash; notice the "circle" class &ndash;&gt;
-            </div>
-            <div class="col s8">
-              <div class="info">
-                <div class="name">
-                  <h5>Mann Khatri</h5>
-                </div>
-                <div class="desg">
-                  <p>President's Trainer</p>
-                </div>
-                <div class="contact">
-                  <a href="https://www.fb.com" target="_blank"><i class="material-icons">chat</i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-   <div class="col s12 m6">
-        <div class="card-panel grey lighten-5 z-depth-1">
-          <div class="row valign-wrapper">
-            <div class="col s4">
-              <img src="https://www.w3schools.com/howto/img_avatar2.png" alt="" class="circle responsive-img"> &lt;!&ndash; notice the "circle" class &ndash;&gt;
-            </div>
-            <div class="col s8">
-              <div class="info">
-                <div class="name">
-                  <h5>Mayank Jindal</h5>
-                </div>
-                <div class="desg">
-                  <p>President's MMA Trainer</p>
-                </div>
-                <div class="contact">
-                  <a href="https://www.fb.com" target="_blank"><i class="material-icons">chat</i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-  </div>
--->
+
 </div>
     </div><!-- Container ends -->
 
@@ -175,9 +93,9 @@
       </div>
       <div class="col 12 m4">
         <ul>
-          <li>Gallery</li>
-          <li>Office Bearers</li>
-          <li>Events</li>
+         <li><a href="{% url 'website:gallery' %}">Gallery</a></li>
+            <li><a href="{% url 'website:events' %}">Events</a></li>
+            <li><a href="{% url 'website:office_bearers' %}">Office Bearers</a></li>
           <hr style="width: 50%; margin: 10px 0;">
           <li>Meet the Developers</li>
         </ul>
