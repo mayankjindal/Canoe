@@ -99,6 +99,14 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.zoho.com'
+EMAIL_HOST_USER = 'canoeadmin@canoefederationofindia.com'
+EMAIL_HOST_PASSWORD = 'canoeadmin1234'
+EMAIL_PORT = 587
+
+
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
@@ -114,3 +122,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, '../static/')
+MEDIA_URL = '/static/img/'
