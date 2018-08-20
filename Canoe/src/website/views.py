@@ -45,7 +45,7 @@ def events(request):
     context = {}
     events = Event.objects.all()
     for e in events:
-        event_list[e.event_name] = {'prize': e.prize, 'date': e.date, 'place': e.location, 'slug': e.slug}
+        event_list[e.event_name] = {'prize': e.prize, 'date': e.date, 'place': e.location, 'slug': e.slug, 'done': e.done}
 
     context['event_list'] = event_list
     return render(request, 'events.html', context)
