@@ -76,3 +76,8 @@ footer .copyright{
     border-bottom: 1px solid #111!important;
     box-shadow: 0 1px 0 0 #111!important;
   }
+
+
+  .sidenav-overlay {
+      z-index: 0!important;
+  }
