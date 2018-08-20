@@ -12,6 +12,7 @@ class Event(models.Model):
     date = models.DateField()
     description = models.TextField()
     slug = models.SlugField(unique=True)
+    done = models.BooleanField(default=False)
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.event_name)
