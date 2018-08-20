@@ -103,9 +103,9 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.zoho.com'
 EMAIL_HOST_USER = 'canoeadmin@canoefederationofindia.com'
-EMAIL_HOST_PASSWORD = 'canoeadmin1234'
+EMAIL_HOST_PASSWORD = 'gDMrfpctAPR7'
 EMAIL_PORT = 587
-
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
 LANGUAGE_CODE = 'en-us'
 
