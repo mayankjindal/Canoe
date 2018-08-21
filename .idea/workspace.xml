@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="75cdbb76-c567-4f3c-88f3-d4315bbaf0eb" name="Default" comment="" />
+    <list default="true" id="75cdbb76-c567-4f3c-88f3-d4315bbaf0eb" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/Canoe/src/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/Canoe/src/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Canoe/static/img/Nama_Ashish_Singh.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Canoe/static/img/Vipul_Singh.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Canoe/static/img/static/img/Nama_Ashish_Singh.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Canoe/static/img/static/img/Vipul_Singh.jpeg" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
