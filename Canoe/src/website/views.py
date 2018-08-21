@@ -141,7 +141,7 @@ def office_bearers(request):
     official_list = {}
     context = {}
     for o in office:
-        official_list[o.name] = {'role': o.role, 'phone': o.phone, 'email': o.email, 'image': o.image.url, 'link': o.social_media}
+        official_list[o.name] = {'role': o.role, 'phone': o.phone, 'email': o.email, 'image': o.image, 'link': o.social_media}
 
     context['official_list'] = official_list
     return render(request, 'office_bearers.html', context)

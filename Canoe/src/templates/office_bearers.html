@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>Canoe Federation of India</title>
     <!-- Compiled and minified CSS -->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified JavaScript -->
@@ -51,10 +52,10 @@
   <div class="col s12 m6">
         <div class="card-panel grey lighten-5 z-depth-1">
           <div class="row valign-wrapper">
-            <div class="col s4">
-              <img src="/{{MEDIA_URL}}{{detail.image}}" alt="" class="responsive-img"> <!-- notice the "circle" class -->
+            <div class="col s12 m4">
+              <img src="/{{detail.image}}" alt="" class="responsive-img"> <!-- notice the "circle" class -->
             </div>
-            <div class="col s8">
+            <div class="col s12 m8">
               <div class="info">
                 <div class="name">
                     <h5><b>{{person}}</b></h5>

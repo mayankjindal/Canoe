@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>Canoe Federation of India</title>
     <!-- Compiled and minified CSS -->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/master.css' %}">
@@ -42,7 +43,7 @@
   <div class="row">
     {% for g in img %}
     <div class="col s6 m4 gallery-image">
-      <img src="/{{MEDIA_URL}}{{g.image.url}}" class="materialboxed responsive-img" alt="Gallery Image">
+      <img src="/{{g.image}}" class="materialboxed responsive-img" alt="Gallery Image">
       <p>{{g.desc}}</p>
     </div>
       {% endfor %}
