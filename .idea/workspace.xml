@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="75cdbb76-c567-4f3c-88f3-d4315bbaf0eb" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Canoe/static/img/e1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Canoe/static/img/pf1.jpg" beforeDir="false" />
-    </list>
+    <list default="true" id="75cdbb76-c567-4f3c-88f3-d4315bbaf0eb" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,7 +11,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Canoe/src/website/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="424">
@@ -53,7 +50,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Canoe/src/website/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="379">
@@ -265,16 +262,6 @@
         <state relative-caret-position="-1170" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Canoe/src/website/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="65" selection-start-line="65" selection-end-line="65" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Canoe/src/canoe/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="319">
@@ -302,6 +289,16 @@
           <caret line="141" column="28" selection-start-line="141" selection-start-column="28" selection-end-line="141" selection-end-column="28" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Canoe/src/website/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
