@@ -48,17 +48,17 @@
     <h3>Office Bearers</h3>
   </div>
   <div class="row">
-      {% for person, detail in official_list.items %}
+      {% for detail in office %}
   <div class="col s12 m6">
         <div class="card-panel grey lighten-5 z-depth-1">
           <div class="row valign-wrapper">
             <div class="col s12 m4">
-              <img src="/{{detail.image}}" alt="" class="responsive-img"> <!-- notice the "circle" class -->
+              <img src="/{{detail.image}}" alt="Canoe Federation Official" class="responsive-img"> <!-- notice the "circle" class -->
             </div>
             <div class="col s12 m8">
               <div class="info">
                 <div class="name">
-                    <h5><b>{{person}}</b></h5>
+                    <h5><b>{{detail.name}}</b></h5>
                 </div>
                 <div class="desg">
                   <p>{{detail.role}}</p>
@@ -70,7 +70,7 @@
                   <p>{{detail.email}}</p>
                 </div>
                 <div class="contact">
-                  <a href={{detail.link}} target="_blank"><i class="material-icons">chat</i></a>
+                    <a href={{detail.social_media}}><i class="material-icons">chat</i></a>
                 </div>
               </div>
             </div>

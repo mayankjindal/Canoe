@@ -19,8 +19,9 @@ def index(request):
             from_email = form.cleaned_data.get('email')
             print(from_email)
             to = 'jindalmayank78@gmail.com'
+            #send_mail(str(subject), str(plain_message), 'canoeadmin@canoefederationofindia.in', [to])
             email = EmailMessage(subject, plain_message, to=[to])
-            print(email)
+            #print(email)
             email.send()
 
             return HttpResponseRedirect('/')
@@ -132,16 +133,14 @@ def register(request):
         print("ERRORS")
         errors = form.errors
 
-    context = {'form':form}
+    context = {'form': form}
     return render(request, 'register.html', context)
 
 
 def office_bearers(request):
     office = OfficeBearers.objects.all()
-    official_list = {}
-    context = {}
+    context = {'office': []}
     for o in office:
-        official_list[o.name] = {'role': o.role, 'phone': o.phone, 'email': o.email, 'image': o.image, 'link': o.social_media}
+        context['office'].append(o)
 
-    context['official_list'] = official_list
     return render(request, 'office_bearers.html', context)
